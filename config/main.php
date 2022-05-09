@@ -4,7 +4,12 @@ return [
     'app_name' => 'Test framework',
     'components' => [
         'router' => [
-            'factory' => \Aigletter\Framework\Components\Routing\RouterFactory::class,
+            'factory' => \Aigletter\Framework\Components\Routing\MyRouterPlant::class,
+            'arguments' => [
+                '/' => function () {echo 'main page';},
+                '/static' => [\Aigletter\App\Controllers\RouteController::class,'static'],
+                '/dynamic' => [new (\Aigletter\App\Controllers\RouteController::class), 'dynamic']
+            ]
         ],
         'cache' => [
             'factory' => \Aigletter\Framework\Components\Caching\CacheFactory::class,
@@ -14,6 +19,9 @@ return [
         ],
         'test' => [
             'factory' => \Aigletter\App\Components\Test\TestFactory::class,
+        ],
+        'logger' => [
+            'factory' => \Aigletter\Framework\Components\Logging\LoggerFactory::class,
         ]
     ]
 ];

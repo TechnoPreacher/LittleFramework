@@ -8,6 +8,6 @@ class RouterFactory extends ComponentFactory
 {
     protected function createConcreteComponent()
     {
-        return new Router();
+      return new Router();
     }
 }
