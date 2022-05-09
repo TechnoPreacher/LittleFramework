@@ -1,25 +1,25 @@
 {
-    "name": "aigletter/test-framework",
-    "description": "Test framework",
-    "type": "project",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Aigletter\\Framework\\": "core/",
-            "Aigletter\\App\\": "app"
-        }
-    },
-    "authors": [
-        {
-            "name": "Ivan Ivanov",
-            "email": "ivan.ivanov@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "psr/simple-cache": "^1.0.0",
-        "aigletter/contracts": "^1.0.1",
-        "technopreacher/router": "dev-main",
-        "technopreacher/logger": "dev-master"
+  "name": "aigletter/test-framework",
+  "description": "Test framework",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Aigletter\\Framework\\": "core/",
+      "Aigletter\\App\\": "app"
     }
+  },
+  "authors": [
+    {
+      "name": "Ivan Ivanov",
+      "email": "ivan.ivanov@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "psr/simple-cache": "^1.0.0",
+    "aigletter/contracts": "^1.0.1",
+    "technopreacher/router": "dev-main",
+    "technopreacher/logger": "dev-master"
+  }
 }

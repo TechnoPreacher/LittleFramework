@@ -8,9 +8,8 @@ class ShopController
 {
     public function __construct()
     {
-        $cache = Application::getApp()->getComponent('cache');
-        $cache->set('hello', 'Hello world!!!!');
-
+       $cache = Application::getApp()->getComponent('cache');
+       // $cache->set('hello', 'Hello world!!!!');
 
     }
 

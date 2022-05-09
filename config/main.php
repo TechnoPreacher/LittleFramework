@@ -6,9 +6,14 @@ return [
         'router' => [
             'factory' => \Aigletter\Framework\Components\Routing\MyRouterPlant::class,
             'arguments' => [
-                '/' => function () {echo 'main page';},
-                '/static' => [\Aigletter\App\Controllers\RouteController::class,'static'],
-                '/dynamic' => [new (\Aigletter\App\Controllers\RouteController::class), 'dynamic']
+
+                '/' => function () {
+                    echo 'main page';
+                },
+                '/static' => [\Aigletter\App\Controllers\RouteController::class, 'static'],
+                '/dynamic' => [new (\Aigletter\App\Controllers\RouteController::class), 'dynamic'],
+                '/shop/show'=>[new(\Aigletter\App\Controllers\ShopController::class), 'show']
+
             ]
         ],
         'cache' => [

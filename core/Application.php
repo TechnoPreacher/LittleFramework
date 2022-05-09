@@ -27,6 +27,7 @@ class Application implements RunnableInterface
 
     public function getComponent($key)
     {
+
         if (isset($this->config['components'][$key]['factory'])) {
             $factoryClass = $this->config['components'][$key]['factory'];
             $arguments = $this->config['components'][$key]['arguments'] ?? [];
@@ -40,8 +41,7 @@ class Application implements RunnableInterface
             return $instance;
         }*/
 
-
-        throw new GetComponentException('Component not found');
+          throw new GetComponentException('Component not found');
     }
 
     public function run()
