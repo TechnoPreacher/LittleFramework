@@ -8,7 +8,7 @@ class ShopController
 {
     public function __construct()
     {
-       $cache = Application::getApp()->getComponent('cache');
+      // $cache = Application::getApp()->getComponent('cache');
        // $cache->set('hello', 'Hello world!!!!');
 
     }
@@ -16,8 +16,8 @@ class ShopController
     public function show()
     {
         $logg = Application::getApp()->getComponent('logger');
-        $logg->debug("yyyyyyy");
-        $logg->alert("yyy__yyy__y");
+        $logg->debug("QQ");
+        $logg->alert("QAQAQA");
 
         $cached = Application::getApp()->getComponent('cache')->get('hello');
         echo 'Shop controller show method. Cached value: ' . $cached . '<br>';
