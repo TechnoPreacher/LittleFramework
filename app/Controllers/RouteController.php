@@ -10,10 +10,10 @@ public static function static()
     echo "call static method 'control' from RouteController";
 }
 
-public function dynamic() :string
+public function dynamic(int $id = 90) :string
 {
     echo "call  method 'last' from object of RouteController";
-
+echo $id;
     return "last";
 }
 

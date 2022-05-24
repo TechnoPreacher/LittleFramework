@@ -7,5 +7,14 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $config = include __DIR__ . '/../config/main.php';
 
 $app = Aigletter\Framework\Application::getApp($config);
-$app->run();
+try {
+    $app->run();
+} catch (Exception $exception) {
+    if ($exception->getCode() < 500) {
+        echo 'CATHCED: ' . $exception->getMessage();
+    } else {
+        trigger_error("500", E_USER_ERROR);
+    }
+}
+
 
