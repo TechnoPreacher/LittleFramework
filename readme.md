@@ -1,4 +1,5 @@
 ### **тестирование динамического роутера**
+** также добавлен перехват исключений**
 
 если запросить   http://test-framework/ просто напишет "main page"
 
@@ -6,7 +7,10 @@
 
 если запросить http://test-framework/dynamic - вызывается метод dynamic() объетка класса контроллера RouteController
 
-если запросить   http://test-framework/g будет исключение no action found for /g (и для любых других урлов, не лежащих в конфиге)
+если запросить   http://test-framework/g будет ~~исключение no action found for /g (и для любых других урлов, не лежащих в конфиге)~~
+перехватываться собственное исключение HttpExceptionAction (его класс описан в роутере) и выдаватьс сообщение о перехвате типа "CATHCED: action not found for this route"
+
+
 
 #### часть 1
 1. создан пакет роутера https://github.com/TechnoPreacher/Router, доступный композеру через composer require technopreacher/router
