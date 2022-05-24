@@ -48,7 +48,8 @@ class Application implements RunnableInterface
     {
         $router = $this->getComponent('router');
         $action = $router->route($_SERVER['REQUEST_URI']);
+        //return $action();
+       call_user_func_array($action,$router->getParams());
 
-        return $action();
     }
 }
